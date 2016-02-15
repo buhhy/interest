@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -x
 cur_dir="$(dirname "$0")"
 cd $cur_dir
 source settings.sh
@@ -12,3 +13,4 @@ nohup $server_folder/bin/$server_name \
     1> $log_folder/output.log \
     2> $log_folder/error.log & \
     echo $!
+set +x

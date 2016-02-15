@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -x
 cur_dir="$(dirname "$0")"
 cd $cur_dir
 source settings.sh
@@ -13,4 +14,4 @@ shopt -s dotglob nullglob
 mv $nested_folder/* .
 rmdir $nested_folder
 echo "Unnested folder $(pwd)/$nested_folder"
-
+set +x

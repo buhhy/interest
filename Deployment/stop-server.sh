@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -x
 cur_dir="$(dirname "$0")"
 cd $cur_dir
 source settings.sh
@@ -14,3 +15,4 @@ if [ -d "$server_folder" ]; then
 else
     echo "Server does not exist"
 fi
+set +x

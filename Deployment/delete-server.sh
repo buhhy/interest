@@ -1,5 +1,5 @@
 #!/bin/bash
-
+set -x
 cur_dir="$(dirname "$0")"
 cd $cur_dir
 source settings.sh
@@ -15,3 +15,4 @@ if [ -f "$server_package" ]; then
 else
     echo "Server package $(pwd)/$server_package does not exist"
 fi
+set +x
